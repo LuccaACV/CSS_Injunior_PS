@@ -1,0 +1,13 @@
+body{
+    background-color: yellow;
+}
+
+header,body{
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}

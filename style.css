@@ -1,13 +1,202 @@
+
+/*****************GERAL****************/
 body{
-    background-color: yellow;
+    font-family: "Rubik";
 }
 
-header,body{
+div{
+    background-color: #F26E4E;
+    padding: 15px 30px;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*********CABECALHO NORMAL****************/
+.cabecalho{
+    height: 4rem;
     display: flex;
-    position: sticky;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
     gap: 10px;
+}
+
+h1{
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    word-wrap: normal;
+}
+nav{
+   display: flex;
+   align-items: center; 
+}
+.menucabecalho{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    list-style-position: inside;
+    gap: 15px;
+    padding: 0px;
+}
+
+.logoLinks{
+    height: 2rem;
+}
+
+/*****MENU HAMBURGUER*****/
+
+.teste{
+    display: none;
+}
+
+.menuhambu{
+    display: none;
+}
+
+.imgmenu{
+    display: none;
+}
+
+@media only screen and (max-width:504px){
+    .imgmenu{
+        display: block;
+        width: 35px;
+        height: 30px;
+    }
+    .teste{
+        display: block;
+        position: absolute;
+        top: 5rem;
+        right: 0px;
+        z-index: 3;
+        padding: 20px 30px;
+    }
+    .menuhambu{
+        display: flex;
+        flex-direction: column;
+        list-style-position: inside;
+        list-style-type: none;
+        gap: 15px;
+        padding: 0;
+    }
+    .menucabecalho{
+        display:none;
+    }
+
+    .cabecalho{
+        padding-right: 38;
+    }
+
+}
+
+
+/***************MAIN***************/
+
+
+.paginaUsuario{
+    z-index: 0;
+    background-color: #F5DA6C;
+    display: flex;
+    padding: 4% 8%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 70px;
+}
+
+.descricao{
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 50%;
+}
+
+.imgusuario{
+    border-radius: 100%;
+    min-width: 230px;
+    max-width: 270px;
+    flex-grow: 0.1;
+}
+
+.paginaTops{
+    z-index: 0;
+    background-color: #F2A84E;
+    display: flex;
+    padding: 4% 0%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 70px;
+}
+
+.listahobbies,.listajogos{
+    display: flex;
+    padding: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: circle;
+    list-style-position: inside;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.paginaTops div {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 30%;
+}
+
+.listajogos{
+    list-style-type:decimal;
+}
+
+h3{
+    display: inline-block;
+}
+
+
+.capas{
+    max-width: 100px;
+    height: 125px;
+    z-index: 3;
+}
+
+.listaRank {
+    margin: 10px 0; 
+}
+
+/************RODAPE****************/
+
+.rodape{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.linkrodape{
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.capas:hover{
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
 }
